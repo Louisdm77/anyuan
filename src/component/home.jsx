@@ -20,12 +20,34 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const yourNumber = "2348135390524";
+    const message = `
+*New Brahmi Shakti Order*
+--------------------------------
+👤 Name: ${formData.name}
+📞 Phone: ${formData.phone}
+💬 WhatsApp: ${formData.whatsapp}
+📧 Email: ${formData.email || "N/A"}
+🏠 Address: ${formData.address}
+📍 State: ${formData.state}
+📦 Package: ${formData.package}
+🚻 Gender: ${formData.gender}
+⏰ Delivery Time: ${formData.deliveryTime}
+📝 Note: ${formData.info || "N/A"}
+--------------------------------
+`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${yourNumber}?text=${encodedMessage}`;
+
+    // Redirect to WhatsApp
+    window.open(whatsappURL, "_blank");
     console.log(formData);
   };
   return (
     <div className="bg-[#fffaf3] text-gray-900">
       {/* Hero Section */}
-      <section className="text-center py-16 px-6 max-w-5xl mx-auto">
+      <section className="text-center py-16 px-6 lg:max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-amber-700">
           FINALLY REVEALED:
         </h1>
