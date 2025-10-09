@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Home = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    whatsapp: "",
+    email: "",
+    address: "",
+    state: "",
+    package: "",
+    gender: "",
+    deliveryTime: "",
+    info: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
   return (
     <div className="bg-[#fffaf3] text-gray-900">
       {/* Hero Section */}
@@ -181,9 +202,11 @@ const Home = () => {
                   <li key={i2}>✅ {f}</li>
                 ))}
               </ul>
-              <button className="bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-amber-700 transition">
-                ORDER NOW
-              </button>
+              <a href="#order">
+                <button className="bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-amber-700 transition">
+                  ORDER NOW
+                </button>
+              </a>
             </div>
           ))}
         </div>
@@ -207,11 +230,219 @@ const Home = () => {
         </p>
       </section>
 
+      <section className="bg-amber-50 py-16 px-6 text-start" id="order">
+        <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8">
+          <h2 className="text-3xl font-bold text-center text-amber-700 mb-8">
+            Order Form for{" "}
+            <span className="italic">Anyuan Colon Clean Tea</span>
+          </h2>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name */}
+            <div>
+              <label className="block font-medium mb-2">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            {/* Phone Number */}
+            <div>
+              <label className="block font-medium mb-2">Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            {/* WhatsApp Number */}
+            <div>
+              <label className="block font-medium mb-2">WhatsApp Number</label>
+              <input
+                type="tel"
+                name="whatsapp"
+                value={formData.whatsapp}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                placeholder="Enter your WhatsApp number"
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block font-medium mb-2">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                placeholder="Enter your email (optional)"
+              />
+            </div>
+
+            {/* Address */}
+            <div>
+              <label className="block font-medium mb-2">Full Address</label>
+              <textarea
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                required
+                rows="3"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                placeholder="Enter your delivery address"
+              ></textarea>
+            </div>
+
+            {/* State */}
+            <div>
+              <label className="block font-medium mb-2">Delivery State</label>
+              <select
+                name="state"
+                value={formData.state}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+              >
+                <option value="">Select your state</option>
+                {[
+                  "Lagos",
+                  "Abuja (FCT)",
+                  "Rivers",
+                  "Oyo",
+                  "Anambra",
+                  "Kano",
+                  "Edo",
+                  "Delta",
+                  "Kaduna",
+                  "Enugu",
+                  "Osun",
+                  "Others",
+                ].map((s, i) => (
+                  <option key={i} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Package */}
+            <div>
+              <label className="block font-medium mb-2">Select Package</label>
+              <select
+                name="package"
+                value={formData.package}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+              >
+                <option value="">Select your package</option>
+                <option value="1 Pack - ₦60,000">1 Pack - ₦60,000</option>
+                <option value="3 Pack - ₦120,000">
+                  3 Pack - (Big Discount) - ₦120,000
+                </option>
+                <option value="6 Pack - ₦240,000">
+                  6 Pack - (Buy 4 Get 2 FREE) - ₦240,000
+                </option>
+                <option value="12 Pack - ₦375,000">
+                  12 Pack - (Buy 8 Get 4 FREE) - ₦375,000
+                </option>
+              </select>
+            </div>
+
+            {/* Gender */}
+            <div>
+              <label className="block font-medium mb-2">Gender</label>
+              <div className="flex gap-6">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    checked={formData.gender === "Male"}
+                    onChange={handleChange}
+                    required
+                  />
+                  Male
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                    checked={formData.gender === "Female"}
+                    onChange={handleChange}
+                    required
+                  />
+                  Female
+                </label>
+              </div>
+            </div>
+
+            {/* Delivery Time */}
+            <div>
+              <label className="block font-medium mb-2">
+                When do you want to receive your order?
+              </label>
+              <select
+                name="deliveryTime"
+                value={formData.deliveryTime}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+              >
+                <option value="">Select delivery time</option>
+                <option value="Today">Today</option>
+                <option value="Tomorrow">Tomorrow</option>
+                <option value="3 Days From Now">3 Days From Now</option>
+              </select>
+            </div>
+
+            {/* Additional Info */}
+            <div>
+              <label className="block font-medium mb-2">
+                Any Additional Information?
+              </label>
+              <textarea
+                name="info"
+                value={formData.info}
+                onChange={handleChange}
+                rows="3"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                placeholder="Provide extra details about delivery or notes for our team"
+              ></textarea>
+            </div>
+
+            {/* Submit */}
+            <div className="text-center pt-4">
+              <button
+                type="submit"
+                className="bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-amber-700 transition"
+              >
+                Submit Order
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 text-sm py-10 text-center px-6">
         <p>
-          © 2025 Anyuan Colon Clean Tea | Terms • Conditions • Privacy •
-          Contact
+          © 2025 Anyuan Colon Clean Tea | Terms • Conditions • Privacy • Contact
         </p>
       </footer>
     </div>
