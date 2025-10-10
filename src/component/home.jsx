@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import img from "../assets/images/img.jpeg";
+import img1 from "../assets/images/img1.jpeg";
 
 const Home = () => {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -20,43 +25,86 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const yourNumber = "2348135390524";
-    const message = `
-*New Brahmi Shakti Order*
---------------------------------
-👤 Name: ${formData.name}
-📞 Phone: ${formData.phone}
-💬 WhatsApp: ${formData.whatsapp}
-📧 Email: ${formData.email || "N/A"}
-🏠 Address: ${formData.address}
-📍 State: ${formData.state}
-📦 Package: ${formData.package}
-🚻 Gender: ${formData.gender}
-⏰ Delivery Time: ${formData.deliveryTime}
-📝 Note: ${formData.info || "N/A"}
---------------------------------
-`;
+    setLoading(true);
+    setStatus("");
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${yourNumber}?text=${encodedMessage}`;
+    const templateParams = {
+      name: formData.name,
+      phone: formData.phone,
+      whatsapp: formData.whatsapp,
+      email: formData.email,
+      address: formData.address,
+      state: formData.state,
+      package: formData.package,
+      gender: formData.gender,
+      delivery_time: formData.deliveryTime,
+      message: formData.info,
+    };
 
-    // Redirect to WhatsApp
-    window.open(whatsappURL, "_blank");
-    console.log(formData);
+    emailjs
+      .send(
+        "service_mqb2izk", // from EmailJS
+        "template_yaf3o3o", // from EmailJS
+        templateParams,
+        "R6lYSIjXyCK5mRIPQ" // from EmailJS
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setStatus("✅ Order sent successfully, you will be contacted soon!");
+          setFormData({
+            name: "",
+            phone: "",
+            whatsapp: "",
+            email: "",
+            address: "",
+            state: "",
+            package: "",
+            gender: "",
+            deliveryTime: "",
+            info: "",
+          });
+        },
+        (error) => {
+          console.error("FAILED...", error);
+          setStatus("❌ Failed to send order. Please try again.");
+        }
+      )
+      .finally(() => setLoading(false));
   };
+
   return (
-    <div className="bg-[#fffaf3] text-gray-900">
+    <div className="bg-[#fffaf3] text-gray-900 p-8">
+      <img
+        src={img1}
+        alt="tea image"
+        className="rounded-xl shadow-lg object-cover w-full"
+      />
       {/* Hero Section */}
-      <section className="text-center py-16 px-6 lg:max-w-5xl mx-auto">
+      <section className="text-center py-16 px-6 w-full lg:max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-amber-700">
           FINALLY REVEALED:
         </h1>
         <p className="text-lg md:text-xl font-medium leading-relaxed">
           A Breakthrough That Combines Centuries Of Tradition With A Rare
           Ayurvedic Herb That Naturally Relieves <strong>Constipation</strong>,
-          Bloating, and Digestive Discomfort — Better Than Every Supplement In
-          The Market.
+          Bloating, and Digestive Discomfort Better Than Every Supplement In The
+          Market.
         </p>
+      </section>
+
+      <section className="bg-amber-50 py-12 px-6 text-start text-xl font-bold text-green-800 line-height: 1.6;">
+        <div>
+          🌿 Tired of feeling bloated, sluggish, and uncomfortable due to
+          constipation? Say goodbye to digestive discomfort with Anyuan Colon
+          Clean Tea the natural remedy trusted by thousands of Nigerians 🇳🇬 over
+          30! ✨ This ancient Ayurvedic formula works gently to restore your
+          body’s natural rhythm, giving you lasting relief from constipation,
+          bloating, and indigestion all without harsh chemicals or side effects.{" "}
+          <br />
+          💧 Experience the soothing power of nature and reclaim your digestive
+          health with Anyuan Colon Clean Tea your gut will thank you! 🌼
+        </div>
       </section>
 
       {/* Testimonial Video */}
@@ -85,7 +133,7 @@ const Home = () => {
       {/* Featured Section */}
       <section className="py-16 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <img
-          src="https://placehold.co/600x400?text=Natural+Herbs+and+Tea"
+          src={img}
           alt="Herbal Relief"
           className="rounded-xl shadow-lg object-cover w-full"
         />
@@ -96,13 +144,13 @@ const Home = () => {
           <p className="text-lg leading-relaxed mb-4">
             Inspired by a 5,000-year-old Ayurvedic formula,{" "}
             <strong>Anyuan Colon Clean Tea</strong> is designed to naturally
-            activate your body’s digestive rhythm — providing deep, lasting
-            relief from constipation, bloating, and indigestion.
+            activate your body’s digestive rhythm providing deep, lasting relief
+            from constipation, bloating, and indigestion.
           </p>
           <p className="text-gray-700">
             Unlike harsh laxatives or chemical supplements, Anyuan Colon Clean
             Tea works gently to restore gut balance and promote smooth, regular
-            bowel movements — without cramping or dependency.
+            bowel movements without cramping or dependency.
           </p>
         </div>
       </section>
@@ -116,24 +164,38 @@ const Home = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
-            "Restores natural bowel movement rhythm",
-            "Eliminates bloating and gas gently",
-            "Repairs digestive lining and gut flora",
-            "Improves nutrient absorption and energy",
-            "Supports liver detox and toxin removal",
-            "Made with 100% pure Ayurvedic herbs",
-            "Zero chemicals, no side effects",
+            {
+              img: "https://i.pinimg.com/1200x/5e/dc/02/5edc02085476bd0d617eaabbfc4bfeaf.jpg",
+              uses: "Restores natural bowel movement rhythm",
+            },
+            {
+              img: "https://i.pinimg.com/736x/0c/3b/f9/0c3bf98fdc0cb84ca653db6bf321a565.jpg",
+              uses: "Eliminates bloating and gas gently",
+            },
+            {
+              img: "https://i.pinimg.com/1200x/c8/e5/10/c8e51091f063062953bb14df2475d487.jpg",
+              uses: "Soothes digestive discomfort and cramps",
+            },
+            {
+              img: "https://i.pinimg.com/1200x/d5/9c/7c/d59c7c6d67865e822938dd4c43ede46f.jpg",
+              uses: "Supports healthy bowel movements",
+            },
+            // "Repairs digestive lining and gut flora",
+            // "Improves nutrient absorption and energy",
+            // "Supports liver detox and toxin removal",
+            // "Made with 100% pure Ayurvedic herbs",
+            // "Zero chemicals, no side effects",
           ].map((benefit, i) => (
             <div
               key={i}
               className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition"
             >
               <img
-                src={`https://placehold.co/300x200?text=Benefit+${i + 1}`}
-                alt={benefit}
-                className="rounded-xl mb-4"
+                src={benefit.img}
+                alt={benefit.uses}
+                className="rounded-xl mb-4 flex justify-center mx-auto object-cover"
               />
-              <h3 className="font-semibold text-lg mb-2">{benefit}</h3>
+              <h3 className="font-semibold text-lg mb-2">{benefit.uses}</h3>
               <p className="text-gray-600 text-sm">
                 Experience lasting comfort and natural relief without harsh
                 laxatives or dependency.
@@ -142,6 +204,15 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <div>
+        {" "}
+        <video
+          src="https://v1.pinimg.com/videos/mc/expMp4/5e/07/8e/5e078eebe4f22445efb54e1eb660e713_t1.mp4"
+          controls
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Testimonials */}
       <section className="py-16 px-6 max-w-6xl mx-auto">
@@ -156,7 +227,7 @@ const Home = () => {
             },
             {
               name: "Babatunde Afolabi",
-              text: "No more bloating or discomfort. I wake up feeling clean and refreshed — this formula truly works!",
+              text: "No more bloating or discomfort. I wake up feeling clean and refreshed  this formula truly works!",
             },
             {
               name: "Ngozi Onuoha",
@@ -237,7 +308,7 @@ const Home = () => {
       {/* Guarantee */}
       <section className="py-16 px-6 text-center max-w-4xl mx-auto">
         <img
-          src="https://placehold.co/600x300?text=90+Day+Guarantee"
+          src={img1}
           alt="Guarantee"
           className="mx-auto rounded-lg shadow-lg mb-6"
         />
@@ -246,7 +317,7 @@ const Home = () => {
         </h2>
         <p className="text-gray-700 leading-relaxed">
           Try Anyuan Colon Clean Tea risk-free for 90 days. If you’re not
-          satisfied with your results, return it — no questions asked. We’re
+          satisfied with your results, return it no questions asked. We’re
           confident you’ll love the relief and energy that comes with a
           naturally balanced digestive system.
         </p>
@@ -452,10 +523,19 @@ const Home = () => {
             <div className="text-center pt-4">
               <button
                 type="submit"
-                className="bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-amber-700 transition"
+                disabled={loading}
+                className={`${
+                  loading ? "bg-gray-400" : "bg-amber-600 hover:bg-amber-700"
+                } text-white px-8 py-3 rounded-lg font-semibold shadow transition`}
               >
-                Submit Order
+                {loading ? "Sending..." : "Submit Order"}
               </button>
+
+              {status && (
+                <p className="mt-4 text-center font-medium text-gray-700">
+                  {status}
+                </p>
+              )}
             </div>
           </form>
         </div>
