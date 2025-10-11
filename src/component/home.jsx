@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import img from "../assets/images/img.jpeg";
-import img1 from "../assets/images/img1.jpeg";
+import img from "../assets/images/tea.png";
+import img1 from "../assets/images/notea.png";
+import img2 from "../assets/images/benefit.png";
+import img3 from "../assets/images/order.png";
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -10,12 +12,12 @@ const Home = () => {
     name: "",
     phone: "",
     whatsapp: "",
-    email: "",
+    // email: "",
     address: "",
     state: "",
     package: "",
-    gender: "",
-    deliveryTime: "",
+    // gender: "",
+    // deliveryTime: "",
     info: "",
   });
 
@@ -32,12 +34,12 @@ const Home = () => {
       name: formData.name,
       phone: formData.phone,
       whatsapp: formData.whatsapp,
-      email: formData.email,
+      // email: formData.email,
       address: formData.address,
       state: formData.state,
       package: formData.package,
-      gender: formData.gender,
-      delivery_time: formData.deliveryTime,
+      // gender: formData.gender,
+      // delivery_time: formData.deliveryTime,
       message: formData.info,
     };
 
@@ -56,12 +58,12 @@ const Home = () => {
             name: "",
             phone: "",
             whatsapp: "",
-            email: "",
+            // email: "",
             address: "",
             state: "",
             package: "",
-            gender: "",
-            deliveryTime: "",
+            // gender: "",
+            // deliveryTime: "",
             info: "",
           });
         },
@@ -76,9 +78,9 @@ const Home = () => {
   return (
     <div className="bg-[#fffaf3] text-gray-900 p-8">
       <img
-        src={img1}
+        src={img}
         alt="tea image"
-        className="rounded-xl shadow-lg object-cover w-full"
+        className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
       />
       {/* Hero Section */}
       <section className="text-center   w-full lg:max-w-5xl mx-auto">
@@ -88,35 +90,28 @@ const Home = () => {
           PEACE?
         </h1>
         <p className="text-3xl">🚨🚨🚨🚨🚨</p>
-        <p className="text-xl md:text-xl font-bold leading-relaxed">
-          📺 WATCH THIS SHORT VIDEO NOW!
-        </p>
+
         <p className="text-xl md:text-xl font-medium leading-relaxed">
           You’re Not Alone! Thousands of Nigerians Are Suffering in Silence, But
-          It Doesn’t Have to Be You! 💪 <br /> <br /> 🍃 Discover How Anyuan
-          Colon Clean Tea Can Help You Flush Out Toxins, Relieve Constipation,
-          and Restore a Healthy Digestive System Naturally! <br /> <br />
-          💧 Feel Lighter. Healthier. Happier All Within Days of Use! <br />{" "}
+          It Doesn’t Have to Be You! 💪 <br /> <br /> 🍃 Discover How our
+          Natural Constipation Tea Can Help You Flush Out Toxins, Relieve
+          Constipation, and Restore a Healthy Digestive System Naturally! <br />{" "}
           <br />
-          📺 WATCH THIS SHORT VIDEO NOW and See Why So Many Nigerians Swear by
-          Anyuan Colon Clean Tea! 🌿
+          💧 Feel Lighter. Healthier. Happier All Within Days of Use!{" "}
         </p>
 
-        <div>
-          {" "}
-          <video
-            src="https://v1.pinimg.com/videos/mc/expMp4/5e/07/8e/5e078eebe4f22445efb54e1eb660e713_t1.mp4"
-            controls
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <img
+          src={img3}
+          alt="tea image"
+          className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mb-4 mt-4 mx-auto"
+        />
       </section>
 
       <section class="bg-gradient-to-b from-green-50 to-white  md:px-12 lg:px-24 text-gray-800">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-6">
-            🛑 ARE YOU TIRED OF STRUGGLING WITH CONSTIPATION, BLOATING, AND
-            STOMACH DISCOMFORT?
+            🛑 ARE YOU TIRED OF STRUGGLING WITH CONSTIPATION, Pile, BLOATING,
+            AND STOMACH DISCOMFORT?
           </h2>
           <p class="text-lg md:text-xl leading-relaxed mb-8">
             Do you wake up feeling heavy, tired, and uncomfortable every day?
@@ -173,7 +168,7 @@ const Home = () => {
 
           <div class="bg-white border border-green-200 rounded-2xl shadow-lg p-6">
             <h3 class="text-2xl font-bold text-green-800 mb-4">
-              🌿 The Natural Solution Anyuan Colon Clean Tea
+              🌿 The Natural Solution is this Natural Constipation Tea
             </h3>
             <p class="text-lg leading-relaxed mb-6 text-gray-700">
               This gentle Ayurvedic tea works deep inside your system to{" "}
@@ -195,38 +190,23 @@ const Home = () => {
 
       {/* Testimonial Video */}
       <section className="bg-amber-50 py-12  text-center">
-        <p className="text-gray-600 mb-6">
-          🔊 Please unmute the video to hear the sound
-        </p>
-        <div className="max-w-2xl mx-auto aspect-video bg-gray-200 rounded-lg shadow-md overflow-hidden">
-          <video
-            src=""
-            poster="https://placehold.co/800x450?text=Customer+Video+Testimonial"
-            controls
-            className="w-full h-full object-cover"
-          />
-        </div>
         <div className="mt-8">
           {" "}
-          <h2 className="text-2xl font-bold text-red-700 mb-4 uppercase">
-            Do not let your case be as brutal as the woman in this video before
-            taking a step!!!
-          </h2>
           <img
             src={img1}
             alt="tea image"
-            className="rounded-xl shadow-lg object-cover w-full mt-16 mb-8"
+            className="rounded-xl shadow-lg object-cover w-full h-[500px] md:max-w-4xl mx-auto mt-16 mb-8"
           />
           <p className="text-2xl font-bold text-red-700 mb-4 uppercase">
-            Anyuan Clean Colon Tea, your final stop to a pain-free life.
+            Natural Constipation Tea, your final stop to a pain-free life.
           </p>
         </div>
 
         <section class="bg-white  md:px-12 lg:px-24 text-gray-800">
           <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-6">
-              🍃 Anyuan Colon Clean Tea is NOT just another detox tea – it’s
-              your COMPLETE solution to restoring gut balance and ending
+              🍃 This Natural Constipation Tea is NOT just another detox tea –
+              it’s your COMPLETE solution to restoring gut balance and ending
               constipation for good!
             </h2>
 
@@ -234,7 +214,7 @@ const Home = () => {
               Backed by ancient Ayurvedic wisdom and trusted by thousands across
               Nigeria,
               <span class="font-semibold text-green-700">
-                Anyuan Colon Clean Tea
+                This Natural Constipation Tea
               </span>{" "}
               gently cleanses your system, relieves stubborn constipation, and
               helps your digestive organs function like new again. No harsh
@@ -243,7 +223,7 @@ const Home = () => {
             </p>
 
             <h3 class="text-2xl font-semibold text-green-800 mb-6">
-              ✨ Why Anyuan Colon Clean Tea is Different:
+              ✨ Why this Natural Constipation Tea is Different:
             </h3>
 
             <div class="bg-green-50 border border-green-200 rounded-2xl shadow-sm text-left p-6 space-y-4">
@@ -287,8 +267,8 @@ const Home = () => {
                 <span class="text-green-600 text-2xl">✅</span>
                 <span>
                   <strong>Zero Side Effects:</strong> Unlike chemical laxatives
-                  that weaken your intestines over time, Anyuan Colon Clean Tea
-                  is completely safe for daily use.
+                  that weaken your intestines over time, This Natural
+                  Constipation Tea is completely safe for daily use.
                 </span>
               </p>
             </div>
@@ -297,7 +277,7 @@ const Home = () => {
               Imagine waking up light, refreshed, and comfortable every morning.
               That’s the power of{" "}
               <span class="font-semibold text-green-700">
-                Anyuan Colon Clean Tea
+                this Natural Constipation Tea
               </span>
               . 🍵
             </p>
@@ -394,12 +374,18 @@ const Home = () => {
           <p class="mt-10 text-lg text-gray-700 leading-relaxed">
             Don’t wait until your intestines scream for help.
             <span class="font-semibold text-green-700">
-              Anyuan Colon Clean Tea
+              This Natural Constipation Tea
             </span>{" "}
             gently flushes out years of built-up waste, restores normal bowel
             movement, and protects your colon before irreversible damage begins.
             🌿
           </p>
+
+          <img
+            src={img1}
+            alt="tea image"
+            className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] lg:max-w-4xl mx-auto"
+          />
 
           <a
             href="#order"
@@ -413,15 +399,15 @@ const Home = () => {
 
       <section class="bg-amber-50 py-16 px-6 md:px-12 lg:px-24 text-gray-800">
         <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-amber-700 mb-6">
-            💥 THE ANYUAN COLON CLEAN TEA TRANSFORMATION TIMELINE 💥
+          <h2 class="text-3xl md:text-4xl font-bold text-amber-700 mb-6 uppercase">
+            💥 THE Natural Constipation Tea TRANSFORMATION TIMELINE 💥
           </h2>
 
           <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-10">
             Watch how your body begins to heal, detoxify, and regain balance
             week by week with the powerful natural cleansing of{" "}
             <span class="font-semibold text-amber-700">
-              Anyuan Colon Clean Tea.
+              The Natural Constipation Tea.
             </span>
           </p>
 
@@ -484,8 +470,9 @@ const Home = () => {
             health.
             <br />
             <span class="text-amber-700 font-semibold">
-              Start your body’s transformation today with Anyuan Colon Clean Tea
-              nature’s gentle, proven solution for lasting digestive freedom!
+              Start your body’s transformation today with This Natural
+              Constipation Tea nature’s gentle, proven solution for lasting
+              digestive freedom!
             </span>
           </p>
 
@@ -501,26 +488,29 @@ const Home = () => {
       {/* Testimonials */}
       <section className="  max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10">
-          What Nigerians Are Saying About Anyuan Colon Clean Tea
+          What Nigerians Are Saying About This Natural Constipation Tea
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               name: "Chinwe Udo",
-              text: "After years of battling constipation, Anyuan Colon Clean Tea restored my digestive balance in just 3 weeks. I feel lighter and more energetic every day!",
+              img: "https://i.pinimg.com/736x/cb/f0/20/cbf0202e3a84362fe4995065edccb7c1.jpg",
+              text: "After years of battling constipation, The Natural Constipation Tea restored my digestive balance in just 3 weeks. I feel lighter and more energetic every day!",
             },
             {
-              name: "Babatunde Afolabi",
+              name: "Akwaji Steve",
+              img: "https://scontent.fiba2-1.fna.fbcdn.net/v/t39.30808-6/480442103_1276490976767390_113941965816985220_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE3OqxKkrb7HM-oMkXH_fG0siM4GwbxSgGyIzgbBvFKAT6f8yA8xv--dxalzWkCnRziwNu1_P1bTnPBlFORssYL&_nc_ohc=-zCkwv02QOYQ7kNvwHbGJas&_nc_oc=AdlOB9lznQiIAzjxtZBEsdXceNv6BG7WpR4Ax9VWk7HnOY7cYsHN6Gb-Ba45OSDvMV4&_nc_zt=23&_nc_ht=scontent.fiba2-1.fna&_nc_gid=P7UT0p5hEXNHFOccnJttkA&oh=00_AfdtTQb2g4dlaapurcC1PnfpMD0P-nIY4Vc4D7vy62Wsqg&oe=68F0809C",
               text: "No more bloating or discomfort. I wake up feeling clean and refreshed  this formula truly works!",
             },
             {
               name: "Ngozi Onuoha",
-              text: "I used to rely on harsh teas and tablets, but Anyuan Colon Clean Tea has made my digestion regular again without any side effects.",
+              img: "https://i.pinimg.com/736x/27/0c/ae/270cae8a1e356d9cb20439dc979114d6.jpg",
+              text: "I used to rely on harsh teas and tablets, but The Natural Constipation Tea has made my digestion regular again without any side effects.",
             },
           ].map((t, i) => (
             <div key={i} className="bg-white p-6 rounded-xl shadow">
               <img
-                src={`https://placehold.co/150x150?text=User+${i + 1}`}
+                src={t.img}
                 alt={t.name}
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
               />
@@ -534,7 +524,7 @@ const Home = () => {
       {/* Product Packages */}
       <section className="bg-amber-50 py-20  text-center">
         <h2 className="text-3xl font-bold mb-8 text-amber-700">
-          Choose Your Anyuan Colon Clean Tea Pack
+          Choose Your The Natural Constipation Tea Pack
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
@@ -580,7 +570,7 @@ const Home = () => {
                 ))}
               </ul>
               <a href="#order">
-                <button className="bg-amber-600 text-white  py-3 rounded-lg font-semibold shadow hover:bg-amber-700 transition">
+                <button className="bg-amber-600 text-white  py-3 px-4 rounded-lg font-semibold shadow hover:bg-amber-700 transition">
                   ORDER NOW
                 </button>
               </a>
@@ -600,7 +590,7 @@ const Home = () => {
           90-Days Money-Back Guarantee
         </h2>
         <p className="text-gray-700 leading-relaxed">
-          Try Anyuan Colon Clean Tea risk-free for 90 days. If you’re not
+          Try The Natural Constipation Tea risk-free for 90 days. If you’re not
           satisfied with your results, return it no questions asked. We’re
           confident you’ll love the relief and energy that comes with a
           naturally balanced digestive system.
@@ -611,7 +601,7 @@ const Home = () => {
         <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8">
           <h2 className="text-3xl font-bold text-center text-amber-700 mb-8">
             Order Form for{" "}
-            <span className="italic">Anyuan Colon Clean Tea</span>
+            <span className="italic">The Natural Constipation Tea</span>
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -658,7 +648,7 @@ const Home = () => {
             </div>
 
             {/* Email */}
-            <div>
+            {/* <div>
               <label className="block font-medium mb-2">Email Address</label>
               <input
                 type="email"
@@ -668,7 +658,7 @@ const Home = () => {
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
                 placeholder="Enter your email (optional)"
               />
-            </div>
+            </div> */}
 
             {/* Address */}
             <div>
@@ -741,7 +731,7 @@ const Home = () => {
             </div>
 
             {/* Gender */}
-            <div>
+            {/* <div>
               <label className="block font-medium mb-2">Gender</label>
               <div className="flex gap-6">
                 <label className="flex items-center gap-2">
@@ -767,10 +757,10 @@ const Home = () => {
                   Female
                 </label>
               </div>
-            </div>
+            </div> */}
 
             {/* Delivery Time */}
-            <div>
+            {/* <div>
               <label className="block font-medium mb-2">
                 When do you want to receive your order?
               </label>
@@ -786,7 +776,7 @@ const Home = () => {
                 <option value="Tomorrow">Tomorrow</option>
                 <option value="3 Days From Now">3 Days From Now</option>
               </select>
-            </div>
+            </div> */}
 
             {/* Additional Info */}
             <div>
@@ -828,9 +818,37 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 text-sm py-10 text-center ">
         <p>
-          © 2025 Anyuan Colon Clean Tea | Terms • Conditions • Privacy • Contact
+          © 2025 The Natural Constipation Tea | Terms • Conditions • Privacy •
+          Contact
         </p>
       </footer>
+
+      <div className="fixed bottom-0 right-0 z-50 bg-red-800 p-4 flex justify-around item-center rounded-tl-lg shadow-lg w-full">
+        <p className="font-bold text-white ">
+          Free Delivery Nationwide. Payment on delivery
+        </p>
+        <a
+          href="#order"
+          className="bg-white text-gray-800 font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition text-center"
+        >
+          Click To Buy Now
+        </a>
+      </div>
+
+      <a
+        href="#order"
+        className={`bg-white fixed top-0 right-0 z-50 text-gray-800 font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition text-center ${setInterval(
+          () => {
+            const colors = ["amber", "red", "green", "blue", "purple", "pink"];
+            const randomColor =
+              colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = `${randomColor}-500`;
+          },
+          10
+        )}`}
+      >
+        Click To Buy Now
+      </a>
     </div>
   );
 };
