@@ -4,6 +4,12 @@ import img from "../assets/images/tea.png";
 import img1 from "../assets/images/notea.png";
 import img2 from "../assets/images/benefit.png";
 import img3 from "../assets/images/order.png";
+import img4 from "../assets/images/now.png";
+import img5 from "../assets/images/ordernow.png";
+import img6 from "../assets/images/rid.png";
+import img7 from "../assets/images/say.png";
+import img8 from "../assets/images/take.png";
+import img9 from "../assets/images/free.png";
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -86,40 +92,40 @@ const Home = () => {
       <section className="text-center   w-full lg:max-w-5xl mx-auto">
         <p className="text-3xl mt-10">🚨🚨🚨🚨🚨</p>
         <h1 className="text-2xl md:text-5xl font-bold mb-2 text-amber-700 w-full ">
-          TIRED OF CONSTIPATION, BLOATING & STOMACH DISCOMFORT STEALING YOUR
-          PEACE?
+          ARE YOU TIRED OF CONSTIPATION, BLOATING, BELLY FAT & STOMACH
+          DISCOMFORT STEALING YOUR PEACE AND CONFIDENCE?
         </h1>
         <p className="text-3xl">🚨🚨🚨🚨🚨</p>
 
         <p className="text-xl md:text-xl font-medium leading-relaxed">
           You’re Not Alone! Thousands of Nigerians Are Suffering in Silence, But
           It Doesn’t Have to Be You! 💪 <br /> <br /> 🍃 Discover How our
-          Natural Constipation Tea Can Help You Flush Out Toxins, Relieve
-          Constipation, and Restore a Healthy Digestive System Naturally! <br />{" "}
-          <br />
+          Natural Constipation Tea has helped thousands of Nigerians Flush Out
+          Toxins, Relieve Constipation, Belly Fat and Restore a Healthy
+          Digestive System Naturally! <br /> <br />
           💧 Feel Lighter. Healthier. Happier All Within Days of Use!{" "}
         </p>
 
-        <img
-          src={img3}
-          alt="tea image"
-          className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mb-4 mt-4 mx-auto"
-        />
+        <div className="w-full flex justify-center">
+          <img
+            src={img6}
+            alt="tea image"
+            className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:w-[1/8] lg:max-w-4xl mb-4 mt-4 mx-auto"
+          />
+        </div>
       </section>
 
       <section class="bg-gradient-to-b from-green-50 to-white  md:px-12 lg:px-24 text-gray-800">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-6">
-            🛑 ARE YOU TIRED OF STRUGGLING WITH CONSTIPATION, Pile, BLOATING,
-            AND STOMACH DISCOMFORT?
+            🛑 GET RID OF CONSTIPATION, UNNEEDED BODY AND BELLY FAT, PILE,
+            BLOATING, AND STOMACH DISCOMFORT?
           </h2>
           <p class="text-lg md:text-xl leading-relaxed mb-8">
-            Do you wake up feeling heavy, tired, and uncomfortable every day?
-            Does your stomach feel full even when you haven’t eaten much? Have
-            you tried everything from herbal bitters to detox teas yet nothing
-            seems to give lasting relief?
+            Join over 3000 Nigerian become free from all kinds of intestinal
+            discomfort and stomach problems today <br />
             <span class="font-semibold text-green-700">
-              This is NOT how life should be.
+              Life shouldnt be painful for anyone.
             </span>
           </p>
 
@@ -195,7 +201,7 @@ const Home = () => {
           <img
             src={img1}
             alt="tea image"
-            className="rounded-xl shadow-lg object-cover w-full h-[500px] md:max-w-4xl mx-auto mt-16 mb-8"
+            className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
           />
           <p className="text-2xl font-bold text-red-700 mb-4 uppercase">
             Natural Constipation Tea, your final stop to a pain-free life.
@@ -384,7 +390,7 @@ const Home = () => {
           <img
             src={img1}
             alt="tea image"
-            className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] lg:max-w-4xl mx-auto"
+            className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
           />
 
           <a
@@ -488,24 +494,24 @@ const Home = () => {
       {/* Testimonials */}
       <section className="  max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10">
-          What Nigerians Are Saying About This Natural Constipation Tea
+          What Nigerians Are Saying About This Natural Herbal Tea
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               name: "Chinwe Udo",
               img: "https://i.pinimg.com/736x/cb/f0/20/cbf0202e3a84362fe4995065edccb7c1.jpg",
-              text: "After years of battling constipation, The Natural Constipation Tea restored my digestive balance in just 3 weeks. I feel lighter and more energetic every day!",
+              text: "This Natural Tea has been a game changer for me, It totlly cleared my Piles and Constipation. I used to suffer from painful bowel movements and constant discomfort, but after using this tea for just a few weeks, I noticed a significant improvement. My digestion has improved, and I feel lighter and more energetic. I highly recommend this product to anyone struggling with constipation or digestive issues.",
             },
             {
               name: "Akwaji Steve",
               img: "https://scontent.fiba2-1.fna.fbcdn.net/v/t39.30808-6/480442103_1276490976767390_113941965816985220_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE3OqxKkrb7HM-oMkXH_fG0siM4GwbxSgGyIzgbBvFKAT6f8yA8xv--dxalzWkCnRziwNu1_P1bTnPBlFORssYL&_nc_ohc=-zCkwv02QOYQ7kNvwHbGJas&_nc_oc=AdlOB9lznQiIAzjxtZBEsdXceNv6BG7WpR4Ax9VWk7HnOY7cYsHN6Gb-Ba45OSDvMV4&_nc_zt=23&_nc_ht=scontent.fiba2-1.fna&_nc_gid=P7UT0p5hEXNHFOccnJttkA&oh=00_AfdtTQb2g4dlaapurcC1PnfpMD0P-nIY4Vc4D7vy62Wsqg&oe=68F0809C",
-              text: "No more bloating or discomfort. I wake up feeling clean and refreshed  this formula truly works!",
+              text: "I have battled constipation for years, trying different drugs with no success until i found this Natural Herbal cure. It has helped me to feel better and my digestion is now more natural. I can now eat without feeling constipated and my appetite is back to normal. I was Scared to try it at first but I am glad I did. I will always recommend this product to anyone struggling with constipation.",
             },
             {
               name: "Ngozi Onuoha",
               img: "https://i.pinimg.com/736x/27/0c/ae/270cae8a1e356d9cb20439dc979114d6.jpg",
-              text: "I used to rely on harsh teas and tablets, but The Natural Constipation Tea has made my digestion regular again without any side effects.",
+              text: "I am Ngozi from Ibadan, I have been battling with too much belly fat for years and I have tried several methods to reduce it but nothing worked until I discovered This Natural Constipation herbal Tea. After using it for just one month, I have lost 5 inches off my waist and my belly fat is visibly reduced. I feel more confident and comfortable in my own skin. If you are going through the same issue, I highly recommend you try this tea.",
             },
           ].map((t, i) => (
             <div key={i} className="bg-white p-6 rounded-xl shadow">
