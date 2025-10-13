@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import img from "../assets/images/tea.png";
 import img1 from "../assets/images/notea.png";
@@ -15,6 +15,7 @@ import img10 from "../assets/images/shot.png";
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
+  const [val, setVal] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -29,7 +30,35 @@ const Home = () => {
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    const updatedData = { ...formData, [name]: value };
+    setFormData(updatedData);
+
+    // the first character of the updated value
+    const firstChar = updatedData.package[0];
+
+    if (firstChar === "1") {
+      setVal(20000);
+    } else if (firstChar === "3") {
+      setVal(30000);
+    } else {
+      setVal(50000);
+    }
+  };
+
+  useEffect(() => {
+    console.log("val", val);
+  }, [val]);
+
+  const orderNow = () => {
+    window.fbq("track", "InitiateCheckout");
+  };
+
+  const placeOrder = () => {
+    window.fbq("track", "Purchase", {
+      value: val,
+      currency: "NGN",
+    });
   };
 
   const handleSubmit = (e) => {
@@ -187,6 +216,7 @@ const Home = () => {
             </p>
             <a
               href="#order"
+              onClick={orderNow}
               class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold text-lg py-3 px-8 rounded-full shadow-md transition-all duration-300"
             >
               🛒 Order Now <br /> (Payment on Delivery)
@@ -291,6 +321,7 @@ const Home = () => {
 
             <a
               href="#order"
+              onClick={orderNow}
               class="inline-block mt-8 bg-green-600 hover:bg-green-700 text-white font-semibold text-lg py-3 px-8 rounded-full shadow-md transition-all duration-300"
             >
               🛒 Order Now – Start Your Cleanse Today
@@ -485,6 +516,7 @@ const Home = () => {
 
           <a
             href="#order"
+            onClick={orderNow}
             class="inline-block mt-8 bg-amber-600 hover:bg-amber-700 text-white font-semibold text-lg py-3 px-8 rounded-full shadow-md transition-all duration-300"
           >
             👉 ORDER NOW – PAYMENT ON DELIVERY!
@@ -576,7 +608,7 @@ const Home = () => {
                   <li key={i2}>✅ {f}</li>
                 ))}
               </ul>
-              <a href="#order">
+              <a href="#order" onClick={orderNow}>
                 <button className="bg-amber-600 text-white  py-3 px-4 rounded-lg font-semibold shadow hover:bg-amber-700 transition">
                   ORDER NOW
                 </button>
@@ -724,17 +756,14 @@ const Home = () => {
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500"
               >
                 <option value="">Select your package</option>
-                <option value="1 Pack - ₦60,000">1 Pack - ₦60,000</option>
-                <option value="3 Pack - ₦120,000">
-                  3 Pack - (Big Discount) - ₦120,000
+                <option value="1 Pack - ₦20,000">1 Pack - ₦20,000</option>
+                <option value="3 Pack - ₦30,000">
+                  3 Pack - (Big Discount) - ₦30,000
                 </option>
-                <option value="6 Pack - ₦240,000">
-                  6 Pack - (Buy 4 Get 2 FREE) - ₦240,000
+                <option value="6 Pack - ₦50,000">
+                  6 Pack - (Buy 4 Get 2 FREE) - ₦50,000
                 </option>
-                <option value="12 Pack - ₦375,000">
-                  12 Pack - (Buy 8 Get 4 FREE) - ₦375,000
-                </option>
-              </select>
+              q</select>
             </div>
 
             {/* Gender */}
@@ -804,6 +833,7 @@ const Home = () => {
             <div className="text-center pt-4">
               <button
                 type="submit"
+                onClick={placeOrder}
                 disabled={loading}
                 className={`${
                   loading ? "bg-gray-400" : "bg-amber-600 hover:bg-amber-700"
@@ -835,6 +865,7 @@ const Home = () => {
           Free Delivery Nationwide. Payment on delivery
         </p>
         <a
+          onClick={orderNow}
           href="#order"
           className="bg-white text-gray-800 font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition text-center"
         >
@@ -844,6 +875,7 @@ const Home = () => {
 
       <a
         href="#order"
+        onClick={orderNow}
         className={`bg-white fixed top-0 right-0 z-50 text-gray-800 font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition text-center ${setInterval(
           () => {
             const colors = ["amber", "red", "green", "blue", "purple", "pink"];
