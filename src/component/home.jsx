@@ -10,6 +10,7 @@ import img6 from "../assets/images/rid.png";
 import img7 from "../assets/images/say.png";
 import img8 from "../assets/images/take.png";
 import img9 from "../assets/images/free.png";
+import img10 from "../assets/images/shot.png";
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
