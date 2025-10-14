@@ -60,7 +60,7 @@ const Home = () => {
       currency: "NGN",
     });
 
-    try{ await fetch("http://localhost:4000/purchase", {
+    try{ await fetch("https://anyuan.onrender.com/purchase", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ value: val }), // 👈 send state value
