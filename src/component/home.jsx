@@ -54,11 +54,27 @@ const Home = () => {
     window.fbq("track", "InitiateCheckout");
   };
 
-  const placeOrder = () => {
+  const placeOrder = async() => {
     window.fbq("track", "Purchase", {
       value: val,
       currency: "NGN",
     });
+
+    try{ await fetch("http://localhost:4000/purchase", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ value: val }), // 👈 send state value
+    });
+
+    console.log("✅ Purchase event sent to backend:", val);
+
+  }catch(err){
+    console.log('err',err)
+
+  }
+    
+
+       
   };
 
   const handleSubmit = (e) => {
@@ -110,6 +126,9 @@ const Home = () => {
       )
       .finally(() => setLoading(false));
   };
+
+
+
 
   return (
     <div className="bg-[#fffaf3] text-gray-900 p-8">
@@ -569,28 +588,26 @@ const Home = () => {
           {[
             {
               title: "Starter Pack",
-              price: "₦60,000",
-              old: "₦90,000",
+              price: "₦21,000",
+              old: "₦25,000",
               features: ["1 Pack", "Free Delivery", "Payment on Delivery"],
             },
             {
               title: "Most Popular",
-              price: "₦120,000",
-              old: "₦180,000",
+              price: "₦32,000",
+              old: "₦48,000",
               features: [
-                "Buy 2 Get 1 Free",
-                "3-Month Supply",
-                "Priority Dispatch",
+                "2 Pack",
+                "Free Delivery", "Payment on Delivery"
               ],
             },
             {
               title: "Best Value",
-              price: "₦240,000",
-              old: "₦360,000",
+              price: "₦53,000",
+              old: "₦68,000",
               features: [
-                "Buy 4 Get 2 Free",
-                "6-Month Supply",
-                "VIP Support Line",
+                "Buy 3 Get 1 Free",
+                "Free Delivery", "Payment on Delivery"
               ],
             },
           ].map((p, i) => (
