@@ -78,10 +78,6 @@ const Home = () => {
   }
 };
 
-    
-
-       
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -132,9 +128,6 @@ const Home = () => {
       )
       .finally(() => setLoading(false));
   };
-
-
-
 
   return (
     <div className="bg-[#fffaf3] text-gray-900 p-8">
@@ -781,7 +774,7 @@ const Home = () => {
                 <option value="">Select your package</option>
                 <option value="1 Pack - ₦21,000">1 Pack - ₦21,000</option>
                 <option value="2 Pack - ₦32,000">
-                  2 Pack - (Big Discount) - ₦30,000
+                  2 Pack - (Big Discount) - ₦32,000
                 </option>
                 <option value="6 Pack - ₦53,000">
                   3 Pack - (Buy 3 Get 1 FREE) - ₦53,000
