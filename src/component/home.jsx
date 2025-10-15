@@ -54,35 +54,27 @@ const Home = () => {
     window.fbq("track", "InitiateCheckout");
   };
 
-
-  const placeOrder = async() => {
-
-   const eventId = `purchase_${Date.now()}`
-
+  const placeOrder = async () => {
+    const eventId = `purchase_${Date.now()}`;
 
     window.fbq("track", "Purchase", {
       value: val,
       currency: "NGN",
-      eventID: eventId, 
+      eventID: eventId,
     });
 
-    try{ await fetch("https://anyuan.onrender.com/purchase", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ value: val , eventId}), // 👈 send state value
-    });
+    try {
+      await fetch("https://anyuan.onrender.com/purchase", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ value: val, eventId }), // 👈 send state value
+      });
 
-    console.log("✅ Purchase event sent to backend:", val);
-
-  }catch(err){
-    console.log('err',err)
-
-  }
-    
-
-       
+      console.log("✅ Purchase event sent to backend:", val);
+    } catch (err) {
+      console.log("err", err);
+    }
   };
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -472,36 +464,42 @@ const Home = () => {
             </span>
           </p>
 
-
           <section className="bg-gradient-to-r from-green-100 to-green-200 py-16">
-  <div className="max-w-3xl mx-auto text-center px-6">
-    <h2 className="text-4xl font-extrabold text-green-900 mb-6">How to use this cure</h2>
-    <p className="text-lg text-green-800 mb-10">
-      Follow these simple steps to make the most of your tea and get the full value.
-    </p>
+            <div className="max-w-3xl mx-auto text-center px-6">
+              <h2 className="text-4xl font-extrabold text-green-900 mb-6">
+                How to use this cure
+              </h2>
+              <p className="text-lg text-green-800 mb-10">
+                Follow these simple steps to make the most of your tea and get
+                the full value.
+              </p>
 
-    <div className="grid gap-8 md:grid-cols-2">
-  <div className="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transform transition duration-300">
-    <h3 className="text-2xl font-bold text-green-900 mb-3">Morning Dose</h3>
-    <p className="text-green-800">
-      Place one tea bag in warm water in the morning and let it soak for 3 to 5 minutes before drinking.
-    </p>
-  </div>
-  <div className="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transform transition duration-300">
-    <h3 className="text-2xl font-bold text-green-900 mb-3">Evening Dose</h3>
-    <p className="text-green-800">
-      In the evening, use another tea bag, soak it in warm water for 3 to 5 minutes before drinking.
-    </p>
-  </div>
-</div>
+              <div className="grid gap-8 md:grid-cols-2">
+                <div className="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transform transition duration-300">
+                  <h3 className="text-2xl font-bold text-green-900 mb-3">
+                    Morning Dose
+                  </h3>
+                  <p className="text-green-800">
+                    Place one tea bag in warm water in the morning and let it
+                    soak for 3 to 5 minutes before drinking.
+                  </p>
+                </div>
+                <div className="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transform transition duration-300">
+                  <h3 className="text-2xl font-bold text-green-900 mb-3">
+                    Evening Dose
+                  </h3>
+                  <p className="text-green-800">
+                    In the evening, use another tea bag, soak it in warm water
+                    for 3 to 5 minutes before drinking.
+                  </p>
+                </div>
+              </div>
 
-
-    <p className="mt-10 text-green-900 font-semibold text-lg">
-      Drink mindfully, dont abuse and you will see the results.
-    </p>
-  </div>
-</section>
-
+              <p className="mt-10 text-green-900 font-semibold text-lg">
+                Drink mindfully, dont abuse and you will see the results.
+              </p>
+            </div>
+          </section>
 
           <div class="bg-white rounded-2xl shadow-xl p-8 text-left space-y-6 border border-amber-200">
             <div class="flex items-start gap-3">
@@ -615,31 +613,42 @@ const Home = () => {
       </section>
 
       <section className="bg-green-50 py-12">
-  <div className="max-w-4xl mx-auto text-center">
-    <h2 className="text-3xl font-bold text-green-900 mb-4">Our Guarantee</h2>
-    <p className="text-green-800 mb-8">
-      We’re confident our Constipation Tea will support healthy digestion and help you feel lighter and more comfortable every day.
-    </p>
-    <div className="flex flex-col md:flex-row justify-center gap-8">
-      <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
-        <span className="text-4xl mb-2">🌿</span>
-        <h3 className="font-bold text-green-900">All-Natural Ingredients</h3>
-        <p className="text-green-800 text-sm text-center">Made from carefully selected herbs known to support digestion.</p>
-      </div>
-      <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
-        <span className="text-4xl mb-2">💪</span>
-        <h3 className="font-bold text-green-900">Effective & Gentle</h3>
-        <p className="text-green-800 text-sm text-center">Gentle on your stomach while helping relieve constipation naturally.</p>
-      </div>
-      <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
-        <span className="text-4xl mb-2">✅</span>
-        <h3 className="font-bold text-green-900">Trusted & Safe</h3>
-        <p className="text-green-800 text-sm text-center">Prepared with care for consistent, reliable results every time.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-green-900 mb-4">
+            Our Guarantee
+          </h2>
+          <p className="text-green-800 mb-8">
+            We’re confident our Constipation Tea will support healthy digestion
+            and help you feel lighter and more comfortable every day.
+          </p>
+          <div className="flex flex-col md:flex-row justify-center gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+              <span className="text-4xl mb-2">🌿</span>
+              <h3 className="font-bold text-green-900">
+                All-Natural Ingredients
+              </h3>
+              <p className="text-green-800 text-sm text-center">
+                Made from carefully selected herbs known to support digestion.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+              <span className="text-4xl mb-2">💪</span>
+              <h3 className="font-bold text-green-900">Effective & Gentle</h3>
+              <p className="text-green-800 text-sm text-center">
+                Gentle on your stomach while helping relieve constipation
+                naturally.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+              <span className="text-4xl mb-2">✅</span>
+              <h3 className="font-bold text-green-900">Trusted & Safe</h3>
+              <p className="text-green-800 text-sm text-center">
+                Prepared with care for consistent, reliable results every time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Product Packages */}
       <section className="bg-amber-50 py-20  text-center">
@@ -658,10 +667,7 @@ const Home = () => {
               title: "Most Popular",
               price: "₦32,000",
               old: "₦48,000",
-              features: [
-                "2 Pack",
-                "Free Delivery", "Payment on Delivery"
-              ],
+              features: ["2 Pack", "Free Delivery", "Payment on Delivery"],
             },
             {
               title: "Best Value",
@@ -669,7 +675,8 @@ const Home = () => {
               old: "₦68,000",
               features: [
                 "Buy 3 Get 1 Free",
-                "Free Delivery", "Payment on Delivery"
+                "Free Delivery",
+                "Payment on Delivery",
               ],
             },
           ].map((p, i) => (
@@ -842,7 +849,8 @@ const Home = () => {
                 <option value="6 Pack - ₦53,000">
                   3 Pack - (Buy 3 Get 1 FREE) - ₦53,000
                 </option>
-              q</select>
+                q
+              </select>
             </div>
 
             {/* Gender */}
@@ -921,10 +929,42 @@ const Home = () => {
                 {loading ? "Sending..." : "Submit Order"}
               </button>
 
+              {/* Popup Modal */}
               {status && (
-                <p className="mt-4 text-center font-medium text-gray-700">
-                  {status}
-                </p>
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                  <div className="bg-white rounded-xl p-6 w-11/12 max-w-sm text-center relative shadow-lg animate-fadeIn">
+                    {/* Checkmark icon */}
+                    <div className="flex items-center justify-center mb-4">
+                      <svg
+                        className="w-12 h-12 text-green-600"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+
+                    {/* Message */}
+                    <h3 className="text-lg font-bold text-gray-800 mb-2">
+                      Thank you for your order!
+                    </h3>
+                    <p className="text-gray-600">{status}</p>
+
+                    {/* Close button */}
+                    <button
+                      onClick={() => setStatus("")}
+                      className="mt-4 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg font-medium"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
               )}
             </div>
           </form>
