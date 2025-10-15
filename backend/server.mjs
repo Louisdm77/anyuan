@@ -2,13 +2,12 @@ import express from "express";
 import fetch from "node-fetch";
 import cors from "cors";
 
-
-
 const app = express();
 app.use(express.json());
 app.use(cors());
-const PIXEL_ID = "2902999323225917"; // your pixel ID
-const ACCESS_TOKEN = "EAAQQgZCFxoDIBPrpagInMbZCjLfihea7460KihapKSmCZCCs20iraTEwMC4AhqZCtUr2HTVykZCyuLthzttqZCQO2vLaxwHQkHAxLwVsErUqXeZApmGJeVokBmKu6MxIZB0qKuZBHAR0h7nJi3nVZBuNQmDQnobZBFBlBFWeH0HyUZAh8ytCzJBlX2zolDXu0h3rSCT2BAZDZD"; //  access token here
+const PIXEL_ID = "1078364124373677"; // your pixel ID
+const ACCESS_TOKEN =
+  "EAAL2ZC4BNeCcBPn5zbsjZBALQX9hqFO8VSY9jppZAOn8wDniIoMKYfZCT0J9OWZCzvkR6mk5JBave2djquuiQHm97Ifzx20gEEvZA5RJ3VSktbr9nhjb20HHgfsiCX7ZC0cpQtgXNfiVLHcPw9a84zdfyBZC9TnNH3jS5L3XmTB6bfThsqZB426NPXvRviuUvyICqNAZDZD"; //  access token here
 
 app.post("/purchase", async (req, res) => {
   try {
@@ -19,7 +18,7 @@ app.post("/purchase", async (req, res) => {
           event_time: Math.floor(Date.now() / 1000),
           action_source: "system_generated",
           event_source_url: "https://relaxmed.com.ng",
-           event_id: req.body.eventId, 
+          event_id: req.body.eventId,
           user_data: {
             client_ip_address: req.ip,
             client_user_agent: req.headers["user-agent"],
@@ -50,8 +49,6 @@ app.post("/purchase", async (req, res) => {
   }
 });
 
-
-
-app.listen(process.env.PORT || 4000, () => 
+app.listen(process.env.PORT || 4000, () =>
   console.log(`✅ Backend running on port ${process.env.PORT || 4000}`)
 );
