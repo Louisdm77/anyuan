@@ -472,6 +472,37 @@ const Home = () => {
             </span>
           </p>
 
+
+          <section className="bg-gradient-to-r from-green-100 to-green-200 py-16">
+  <div className="max-w-3xl mx-auto text-center px-6">
+    <h2 className="text-4xl font-extrabold text-green-900 mb-6">How to use this cure</h2>
+    <p className="text-lg text-green-800 mb-10">
+      Follow these simple steps to make the most of your tea and get the full value.
+    </p>
+
+    <div className="grid gap-8 md:grid-cols-2">
+  <div className="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transform transition duration-300">
+    <h3 className="text-2xl font-bold text-green-900 mb-3">Morning Dose</h3>
+    <p className="text-green-800">
+      Place one tea bag in warm water in the morning and let it soak for 3 to 5 minutes before drinking.
+    </p>
+  </div>
+  <div className="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transform transition duration-300">
+    <h3 className="text-2xl font-bold text-green-900 mb-3">Evening Dose</h3>
+    <p className="text-green-800">
+      In the evening, use another tea bag, soak it in warm water for 3 to 5 minutes before drinking.
+    </p>
+  </div>
+</div>
+
+
+    <p className="mt-10 text-green-900 font-semibold text-lg">
+      Drink mindfully, dont abuse and you will see the results.
+    </p>
+  </div>
+</section>
+
+
           <div class="bg-white rounded-2xl shadow-xl p-8 text-left space-y-6 border border-amber-200">
             <div class="flex items-start gap-3">
               <span class="text-green-600 text-2xl">✅</span>
@@ -582,6 +613,33 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <section className="bg-green-50 py-12">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-3xl font-bold text-green-900 mb-4">Our Guarantee</h2>
+    <p className="text-green-800 mb-8">
+      We’re confident our Constipation Tea will support healthy digestion and help you feel lighter and more comfortable every day.
+    </p>
+    <div className="flex flex-col md:flex-row justify-center gap-8">
+      <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+        <span className="text-4xl mb-2">🌿</span>
+        <h3 className="font-bold text-green-900">All-Natural Ingredients</h3>
+        <p className="text-green-800 text-sm text-center">Made from carefully selected herbs known to support digestion.</p>
+      </div>
+      <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+        <span className="text-4xl mb-2">💪</span>
+        <h3 className="font-bold text-green-900">Effective & Gentle</h3>
+        <p className="text-green-800 text-sm text-center">Gentle on your stomach while helping relieve constipation naturally.</p>
+      </div>
+      <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+        <span className="text-4xl mb-2">✅</span>
+        <h3 className="font-bold text-green-900">Trusted & Safe</h3>
+        <p className="text-green-800 text-sm text-center">Prepared with care for consistent, reliable results every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Product Packages */}
       <section className="bg-amber-50 py-20  text-center">
