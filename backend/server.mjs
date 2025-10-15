@@ -4,7 +4,7 @@ import cors from "cors";
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "https://relaxmed.com.ng" }));
 const PIXEL_ID = "1078364124373677"; // your pixel ID
 const ACCESS_TOKEN =
   "EAAL2ZC4BNeCcBPn5zbsjZBALQX9hqFO8VSY9jppZAOn8wDniIoMKYfZCT0J9OWZCzvkR6mk5JBave2djquuiQHm97Ifzx20gEEvZA5RJ3VSktbr9nhjb20HHgfsiCX7ZC0cpQtgXNfiVLHcPw9a84zdfyBZC9TnNH3jS5L3XmTB6bfThsqZB426NPXvRviuUvyICqNAZDZD"; //  access token here
