@@ -54,16 +54,22 @@ const Home = () => {
     window.fbq("track", "InitiateCheckout");
   };
 
+
   const placeOrder = async() => {
+
+   const eventId = `purchase_${Date.now()}`
+
+
     window.fbq("track", "Purchase", {
       value: val,
       currency: "NGN",
+      eventID: eventId, 
     });
 
     try{ await fetch("https://anyuan.onrender.com/purchase", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ value: val }), // 👈 send state value
+      body: JSON.stringify({ value: val , eventId}), // 👈 send state value
     });
 
     console.log("✅ Purchase event sent to backend:", val);

@@ -18,7 +18,8 @@ app.post("/purchase", async (req, res) => {
           event_name: "Purchase",
           event_time: Math.floor(Date.now() / 1000),
           action_source: "server",
-          event_source_url: "https://relaxmed.com.ng", 
+          event_source_url: "https://relaxmed.com.ng",
+           event_id: req.body.eventId, 
           user_data: {
             client_ip_address: req.ip,
             client_user_agent: req.headers["user-agent"],
