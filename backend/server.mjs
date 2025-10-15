@@ -10,17 +10,6 @@ app.use(cors());
 const PIXEL_ID = "2902999323225917"; //  pixel ID
 const ACCESS_TOKEN = "EAAQQgZCFxoDIBPrpagInMbZCjLfihea7460KihapKSmCZCCs20iraTEwMC4AhqZCtUr2HTVykZCyuLthzttqZCQO2vLaxwHQkHAxLwVsErUqXeZApmGJeVokBmKu6MxIZB0qKuZBHAR0h7nJi3nVZBuNQmDQnobZBFBlBFWeH0HyUZAh8ytCzJBlX2zolDXu0h3rSCT2BAZDZD"; //  access token here
 
-import express from "express";
-import fetch from "node-fetch";
-import cors from "cors";
-
-const app = express();
-app.use(express.json());
-app.use(cors());
-
-const PIXEL_ID = "2902999323225917";
-const ACCESS_TOKEN = "YOUR_ACCESS_TOKEN_HERE";
-
 app.post("/purchase", async (req, res) => {
   try {
     const { value, eventID } = req.body;
