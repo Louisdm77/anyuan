@@ -38,11 +38,11 @@ const Home = () => {
     const firstChar = updatedData.package[0];
 
     if (firstChar === "1") {
-      setVal(20000);
-    } else if (firstChar === "3") {
-      setVal(30000);
+      setVal(21000);
+    } else if (firstChar === "2") {
+      setVal(32000);
     } else {
-      setVal(50000);
+      setVal(53000);
     }
   };
 
@@ -55,33 +55,29 @@ const Home = () => {
   };
 
 
-  const placeOrder = async() => {
+ const placeOrder = async () => {
+  const eventID = `purchase_${Date.now()}`;
 
-   const eventId = `purchase_${Date.now()}`
+  // Fire browser event
+  window.fbq("track", "Purchase", {
+    value: val,
+    currency: "NGN",
+    eventID: eventID, // 👈 match ID
+  });
 
-
-    window.fbq("track", "Purchase", {
-      value: val,
-      currency: "NGN",
-      eventID: eventId, 
-    });
-
-    try{ await fetch("https://anyuan.onrender.com/purchase", {
+  // Send to backend
+  try {
+    await fetch("https://your-backend-url.onrender.com/purchase", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ value: val , eventId}), // 👈 send state value
+      body: JSON.stringify({ value: val, eventID }), // 👈 same ID here
     });
-
-    console.log("✅ Purchase event sent to backend:", val);
-
-  }catch(err){
-    console.log('err',err)
-
+    console.log("✅ Sent purchase to backend");
+  } catch (err) {
+    console.error("❌ Error sending to backend:", err);
   }
-    
+};
 
-       
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -132,9 +128,6 @@ const Home = () => {
       )
       .finally(() => setLoading(false));
   };
-
-
-
 
   return (
     <div className="bg-[#fffaf3] text-gray-900 p-8">
@@ -779,12 +772,12 @@ const Home = () => {
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500"
               >
                 <option value="">Select your package</option>
-                <option value="1 Pack - ₦20,000">1 Pack - ₦20,000</option>
-                <option value="3 Pack - ₦30,000">
-                  3 Pack - (Big Discount) - ₦30,000
+                <option value="1 Pack - ₦21,000">1 Pack - ₦21,000</option>
+                <option value="2 Pack - ₦32,000">
+                  2 Pack - (Big Discount) - ₦32,000
                 </option>
-                <option value="6 Pack - ₦50,000">
-                  6 Pack - (Buy 4 Get 2 FREE) - ₦50,000
+                <option value="6 Pack - ₦53,000">
+                  3 Pack - (Buy 3 Get 1 FREE) - ₦53,000
                 </option>
               q</select>
             </div>
