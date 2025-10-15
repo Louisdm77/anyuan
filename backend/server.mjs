@@ -6,7 +6,11 @@ import cors from "cors";
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://relaxmed.com.ng", 
+  methods: ["GET","POST","OPTIONS"],
+  credentials: true
+}));
 const PIXEL_ID = "2902999323225917"; //  pixel ID
 const ACCESS_TOKEN = "EAAQQgZCFxoDIBPrpagInMbZCjLfihea7460KihapKSmCZCCs20iraTEwMC4AhqZCtUr2HTVykZCyuLthzttqZCQO2vLaxwHQkHAxLwVsErUqXeZApmGJeVokBmKu6MxIZB0qKuZBHAR0h7nJi3nVZBuNQmDQnobZBFBlBFWeH0HyUZAh8ytCzJBlX2zolDXu0h3rSCT2BAZDZD"; //  access token here
 
