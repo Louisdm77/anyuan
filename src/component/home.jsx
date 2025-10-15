@@ -245,7 +245,7 @@ const Home = () => {
         <div className="mt-8">
           {" "}
           <img
-            src={img1}
+            src={img8}
             alt="tea image"
             className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
           />
@@ -435,7 +435,7 @@ const Home = () => {
           </p>
 
           <img
-            src={img1}
+            src={img7}
             alt="tea image"
             className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
           />
@@ -500,6 +500,12 @@ const Home = () => {
               </p>
             </div>
           </section>
+
+          <img
+            src={img9}
+            alt="tea image"
+            className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
+          />
 
           <div class="bg-white rounded-2xl shadow-xl p-8 text-left space-y-6 border border-amber-200">
             <div class="flex items-start gap-3">
@@ -611,6 +617,12 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <img
+        src={img4}
+        alt="tea image"
+        className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
+      />
 
       <section className="bg-green-50 py-12">
         <div className="max-w-4xl mx-auto text-center">

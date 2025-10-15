@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors({ origin: "https://relaxmed.com.ng" }));
 const PIXEL_ID = "1078364124373677"; // your pixel ID
 const ACCESS_TOKEN =
-  "EAAL2ZC4BNeCcBPn5zbsjZBALQX9hqFO8VSY9jppZAOn8wDniIoMKYfZCT0J9OWZCzvkR6mk5JBave2djquuiQHm97Ifzx20gEEvZA5RJ3VSktbr9nhjb20HHgfsiCX7ZC0cpQtgXNfiVLHcPw9a84zdfyBZC9TnNH3jS5L3XmTB6bfThsqZB426NPXvRviuUvyICqNAZDZD"; //  access token here
+  "EAAL2ZC4BNeCcBPrK6Gs8CZCytVabU6Cih7Mfor0wJKwGDiVSPOcwMW7l1rZBFf8667UdXrm4rEAwhbhTf0V9STpwbvaZARnM1G6ZCkY1CZAOsPORCFckDLnfHX9tT31pHDodwZBpUVSlDiWgS3BSsCTNUpQywUYUwOGgXZCF485PIC0wTsOmjrXAqzx55NSta6ZCoJAZDZD"; //  access token here
 
 app.post("/purchase", async (req, res) => {
   try {
