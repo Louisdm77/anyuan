@@ -128,28 +128,154 @@ const Home = () => {
 
   return (
     <div className="bg-[#fffaf3] text-gray-900 p-8">
+      <section className="bg-gradient-to-r from-amber-50 to-white py-8">
+        <div className="max-w-6xl mx-auto px-6">
+          <h1 className="text-center text-2xl md:text-3xl lg:text-3xl font-extrabold text-red-400 leading-tight">
+            LATEST UPDATE: Endorsed by Top Gastroenterologists — a trusted
+            natural approach for persistent constipation, intestinal blockages,
+            hemorrhoids, stomach discomfort, and support with healthy weight
+            management.
+          </h1>
+        </div>
+      </section>
+
       <img
         src={img}
         alt="tea image"
         className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
       />
+
+      <section className="bg-pink-200 py-8 rounded-lg mt-4 mb-4">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-center text-3xl md:text-5xl font-bold text-black  leading-tight">
+            Fast, natural support for hard stools, hemorrhoids, chronic stomach
+            pain and intestinal discomfort{" "}
+            <strong> many users notice improvement within 7 days.</strong>
+          </h1>
+        </div>
+      </section>
+
+      <img
+        src={img10}
+        alt="tea image"
+        className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
+      />
+
+      <section className="bg-gradient-to-r from-amber-50 to-white py-12">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-amber-800 mb-4 leading-tight">
+            FINALLY We’ve Found the Solution You’ve Been Waiting For
+          </h1>
+
+          <p className="text-lg text-gray-700 mb-8">
+            Say goodbye to the struggle — click below to discover the simple,
+            natural approach that’s helping many feel better.
+          </p>
+
+          <a
+            href="#solution"
+            className="inline-block bg-red-600 w-full lg:text-4xl md:text-2xl text-white font-bold rounded-lg  hover:bg-amber-700 text-white font-semibold py-8 px-8 l shadow-lg transform transition-transform duration-200 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-amber-200"
+            aria-label="Click to see the solution"
+          >
+            CLICK HERE TO SEE THE SOLUTION
+          </a>
+        </div>
+      </section>
+
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="overflow-hidden rounded-2xl shadow-lg transform transition hover:-translate-y-1">
+            <img
+              src="https://i.pinimg.com/736x/79/fa/2a/79fa2aa2cf106094d2d3b678da0dcc3a.jpg" // replace with your image path or imported variable
+              alt="Descriptive alt text 1"
+              loading="lazy"
+              className="w-full h-64 md:h-56 lg:h-72 object-cover"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-2xl shadow-lg transform transition hover:-translate-y-1">
+            <img
+              src="https://i.pinimg.com/1200x/58/70/46/5870463bce3f3c7213c4b9fcb36e0f41.jpg" // replace with your image path or imported variable
+              alt="Descriptive alt text 2"
+              loading="lazy"
+              className="w-full h-64 md:h-56 lg:h-72 object-cover"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-2xl shadow-lg transform transition hover:-translate-y-1">
+            <img
+              src="https://i.pinimg.com/1200x/42/48/f7/4248f773f52acdf35341b7d0919872c6.jpg" // replace with your image path or imported variable
+              alt="Descriptive alt text 3"
+              loading="lazy"
+              className="w-full h-64 md:h-56 lg:h-72 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+      <section class="max-w-4xl mx-auto px-4 py-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+          Constipation and Bloating: A Growing Health Concern in Nigeria
+        </h2>
+
+        <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
+          According to the{" "}
+          <span class="font-semibold">World Health Organization (WHO)</span>,
+          constipation and bloating have become widespread health concerns
+          affecting millions of people globally, including a growing number of
+          Nigerians.
+        </p>
+
+        <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
+          Studies show that about{" "}
+          <span class="font-semibold">30 to 40 out of every 100 adults</span> in
+          Nigeria struggle with constipation or irregular bowel movements.
+        </p>
+
+        <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
+          Among pregnant women, the problem is also common — research indicates
+          that
+          <span class="font-semibold">around 28%</span> experience constipation
+          as one of the major digestive challenges during pregnancy.
+        </p>
+
+        <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+          The WHO also notes that{" "}
+          <span class="font-semibold">long-term constipation</span> can lead to
+          several complications such as
+          <span class="italic">
+            piles (hemorrhoids), anal fissures, fecal impaction, rectal prolapse
+          </span>
+          , and other gastrointestinal disorders.
+        </p>
+      </section>
+
       {/* Hero Section */}
       <section className="text-center   w-full lg:max-w-5xl mx-auto">
-        <p className="text-3xl mt-10">🚨🚨🚨🚨🚨</p>
-        <h1 className="text-2xl md:text-5xl font-bold mb-2 text-amber-700 w-full ">
+        {/* <p className="text-3xl mt-10">🚨🚨🚨🚨🚨</p> */}
+        {/* <h1 className="text-2xl md:text-5xl font-bold mb-2 text-amber-700 w-full ">
           ARE YOU TIRED OF CONSTIPATION, BLOATING, BELLY FAT & STOMACH
           DISCOMFORT STEALING YOUR PEACE AND CONFIDENCE?
-        </h1>
+        </h1> */}
         <p className="text-3xl">🚨🚨🚨🚨🚨</p>
 
-        <p className="text-xl md:text-xl font-medium leading-relaxed">
-          You’re Not Alone! Thousands of Nigerians Are Suffering in Silence, But
-          It Doesn’t Have to Be You! 💪 <br /> <br /> 🍃 Discover How our
-          Natural Constipation Tea has helped thousands of Nigerians Flush Out
-          Toxins, Relieve Constipation, Belly Fat and Restore a Healthy
-          Digestive System Naturally! <br /> <br />
-          💧 Feel Lighter. Healthier. Happier All Within Days of Use!{" "}
-        </p>
+        <div className="text-xl md:text-xl font-medium leading-relaxed text-3xl md:text-4xl mb-6 text-black-700 w-full bg-green-300 p-4 rounded-lg">
+          <p>
+            {" "}
+            {/* You’re Not Alone! Thousands of Nigerians Are Suffering in Silence, But
+          It Doesn’t Have to Be You! 💪 <br /> <br />  */}
+            🍃 Discover How our Natural Constipation Tea has helped thousands of
+            Nigerians Flush Out Toxins, Relieve Constipation, Belly Fat and
+            Restore a Healthy Digestive System Naturally! <br /> <br />
+            💧 Feel Lighter. Healthier. Happier All Within Days of Use!{" "}
+          </p>
+          <a
+            href="#order"
+            className="inline-block bg-red-600 w-full mt-4 lg:text-4xl md:text-2xl text-white font-bold rounded-lg  hover:bg-amber-700 text-white font-semibold py-8 px-8 l shadow-lg transform transition-transform duration-200 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-amber-200"
+            aria-label="Click to see the solution"
+          >
+            CLICK HERE TO ORDER NOW
+          </a>
+        </div>
 
         <div className="w-full flex justify-center">
           <img
@@ -160,11 +286,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section class="bg-gradient-to-b from-green-50 to-white  md:px-12 lg:px-24 text-gray-800">
+      <section class="bg-gradient-to-b from-green-50 to-white  md:px-12 lg:px-24 py-10 text-gray-800">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-6">
-            🛑 GET RID OF CONSTIPATION, UNNEEDED BODY AND BELLY FAT, PILE,
-            BLOATING, AND STOMACH DISCOMFORT?
+            🛑 THIS TEA ALSO HELP GET RID OF CONSTIPATION, UNNEEDED BODY AND
+            BELLY FAT, PILE, BLOATING, AND STOMACH DISCOMFORT?
           </h2>
           <p class="text-lg md:text-xl leading-relaxed mb-8">
             Join over 3000 Nigerian become free from all kinds of intestinal
@@ -217,7 +343,10 @@ const Home = () => {
             discomfort always returns sometimes even worse than before.
           </p>
 
-          <div class="bg-white border border-green-200 rounded-2xl shadow-lg p-6">
+          <div
+            id="solution"
+            class="bg-white border border-green-200 rounded-2xl shadow-lg p-6"
+          >
             <h3 class="text-2xl font-bold text-green-800 mb-4">
               🌿 The Natural Solution is this Natural Constipation Tea
             </h3>
@@ -623,39 +752,118 @@ const Home = () => {
         alt="tea image"
         className="rounded-xl shadow-lg object-cover w-[1/4] h-[1/4] md:max-w-4xl mx-auto"
       />
-
-      <section className="bg-green-50 py-12">
+      <section className="bg-white py-12 px-6 md:px-16 lg:px-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-green-900 mb-4">
-            Our Guarantee
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-700 mb-4">
+            🌿 Made with Powerful Herbal Ingredients for Lasting Relief
           </h2>
-          <p className="text-green-800 mb-8">
-            We’re confident our Constipation Tea will support healthy digestion
-            and help you feel lighter and more comfortable every day.
+          <p className="text-gray-700 text-lg mb-8">
+            Constipation Tea is carefully formulated with pure, natural herbs
+            that work together to relieve chronic constipation, ease stomach
+            pain, and promote better digestion.
           </p>
-          <div className="flex flex-col md:flex-row justify-center gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
-              <span className="text-4xl mb-2">🌿</span>
-              <h3 className="font-bold text-green-900">
-                All-Natural Ingredients
+        </div>
+
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-amber-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+            <h3 className="text-xl font-semibold text-amber-700 mb-2">
+              ✅ Senna Leaves (Cassia Angustifolia)
+            </h3>
+            <p className="text-gray-700">
+              A trusted natural laxative that helps relieve constipation and
+              supports gentle detox and weight management.
+            </p>
+          </div>
+
+          <div className="bg-amber-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+            <h3 className="text-xl font-semibold text-amber-700 mb-2">
+              ✅ 100% Caffeine-Free
+            </h3>
+            <p className="text-gray-700">
+              Our tea contains no caffeine at all — so it won’t affect your
+              brain or nervous system. It’s safe, soothing, and perfect for
+              daily use.
+            </p>
+          </div>
+
+          <div className="bg-amber-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+            <h3 className="text-xl font-semibold text-amber-700 mb-2">
+              ✅ Ginger (Zingiber officinale)
+            </h3>
+            <p className="text-gray-700">
+              Naturally calms the stomach, reduces bloating, and improves
+              digestion for everyday comfort.
+            </p>
+          </div>
+
+          <div className="bg-amber-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+            <h3 className="text-xl font-semibold text-amber-700 mb-2">
+              ✅ Psyllium Husk (Plantago ovata)
+            </h3>
+            <p className="text-gray-700">
+              A rich natural fiber that absorbs water, softens stool, and
+              provides long-lasting relief from chronic constipation.
+            </p>
+          </div>
+
+          <div className="bg-amber-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition md:col-span-2">
+            <h3 className="text-xl font-semibold text-amber-700 mb-2">
+              ✅ Licorice Root (Glycyrrhiza glabra)
+            </h3>
+            <p className="text-gray-700">
+              Helps balance stomach acid, supports smooth digestion, and
+              promotes healthy bowel movement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-green-50 py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="flex flex-col items-center mb-6">
+            <span className="text-7xl mb-4">🛡️</span>
+            <h2 className="text-4xl font-extrabold text-green-900 mb-3">
+              100% Herbal Confidence Guarantee
+            </h2>
+            <p className="text-green-800 text-lg max-w-3xl">
+              We stand by the power of nature. Our Constipation Relief Tea is
+              made to help you feel lighter, cleaner, and more comfortable —
+              naturally. You’ll notice results, or you’ll know you’ve chosen the
+              right herbal support.
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center gap-8 mt-10">
+            <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-xl transition">
+              <span className="text-5xl mb-3">🌿</span>
+              <h3 className="font-bold text-green-900 text-xl mb-2">
+                100% Natural Ingredients
               </h3>
-              <p className="text-green-800 text-sm text-center">
-                Made from carefully selected herbs known to support digestion.
+              <p className="text-green-800 text-center text-sm">
+                Each tea bag is packed with pure, natural herbs trusted to
+                cleanse and support smooth digestion.
               </p>
             </div>
-            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
-              <span className="text-4xl mb-2">💪</span>
-              <h3 className="font-bold text-green-900">Effective & Gentle</h3>
-              <p className="text-green-800 text-sm text-center">
-                Gentle on your stomach while helping relieve constipation
-                naturally.
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-xl transition">
+              <span className="text-5xl mb-3">💪</span>
+              <h3 className="font-bold text-green-900 text-xl mb-2">
+                Gentle Yet Powerful
+              </h3>
+              <p className="text-green-800 text-center text-sm">
+                Designed to work naturally with your body — soothing your system
+                while effectively easing constipation.
               </p>
             </div>
-            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
-              <span className="text-4xl mb-2">✅</span>
-              <h3 className="font-bold text-green-900">Trusted & Safe</h3>
-              <p className="text-green-800 text-sm text-center">
-                Prepared with care for consistent, reliable results every time.
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-xl transition">
+              <span className="text-5xl mb-3">✅</span>
+              <h3 className="font-bold text-green-900 text-xl mb-2">
+                Safe & Trusted by Users
+              </h3>
+              <p className="text-green-800 text-center text-sm">
+                Carefully blended for consistency, purity, and visible results
+                that build confidence every cup.
               </p>
             </div>
           </div>
@@ -663,56 +871,87 @@ const Home = () => {
       </section>
 
       {/* Product Packages */}
-      <section className="bg-amber-50 py-20  text-center">
-        <h2 className="text-3xl font-bold mb-8 text-amber-700">
-          Choose Your The Natural Constipation Tea Pack
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            {
-              title: "Starter Pack",
-              price: "₦21,000",
-              old: "₦25,000",
-              features: ["1 Pack", "Free Delivery", "Payment on Delivery"],
-            },
-            {
-              title: "Most Popular",
-              price: "₦32,000",
-              old: "₦48,000",
-              features: ["2 Pack", "Free Delivery", "Payment on Delivery"],
-            },
-            {
-              title: "Best Value",
-              price: "₦53,000",
-              old: "₦68,000",
-              features: [
-                "Buy 3 Get 1 Free",
-                "Free Delivery",
-                "Payment on Delivery",
-              ],
-            },
-          ].map((p, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition flex flex-col items-center"
-            >
-              <h3 className="text-xl font-bold mb-3">{p.title}</h3>
-              <p className="text-gray-600 line-through mb-1">{p.old}</p>
-              <p className="text-2xl font-bold text-amber-700 mb-4">
-                {p.price}
-              </p>
-              <ul className="text-gray-700 mb-6 space-y-2">
-                {p.features.map((f, i2) => (
-                  <li key={i2}>✅ {f}</li>
-                ))}
-              </ul>
-              <a href="#order" onClick={orderNow}>
-                <button className="bg-amber-600 text-white  py-3 px-4 rounded-lg font-semibold shadow hover:bg-amber-700 transition">
-                  ORDER NOW
-                </button>
-              </a>
-            </div>
-          ))}
+      <section className="bg-gradient-to-b from-amber-50 to-yellow-100 py-24 text-center">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-amber-800 tracking-tight">
+            Choose Your Natural Constipation Tea Pack
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Starter Pack",
+                price: "₦21,000",
+                old: "₦25,000",
+                features: ["1 Pack", "Free Delivery", "Payment on Delivery"],
+                highlight: false,
+              },
+              {
+                title: "Most Popular",
+                price: "₦32,000",
+                old: "₦48,000",
+                features: ["2 Pack", "Free Delivery", "Payment on Delivery"],
+                highlight: true,
+              },
+              {
+                title: "Best Value",
+                price: "₦53,000",
+                old: "₦68,000",
+                features: [
+                  "Buy 3 Get 1 Free",
+                  "Free Delivery",
+                  "Payment on Delivery",
+                ],
+                highlight: false,
+              },
+            ].map((p, i) => (
+              <div
+                key={i}
+                className={`relative rounded-3xl p-8 transition-all duration-300 border ${
+                  p.highlight
+                    ? "bg-gradient-to-b from-amber-200 to-amber-100 shadow-2xl border-amber-500 scale-105"
+                    : "bg-white shadow-lg hover:shadow-2xl hover:-translate-y-1 border-gray-100"
+                }`}
+              >
+                {p.highlight && (
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-600 text-white text-sm font-semibold py-1 px-4 rounded-full shadow-md">
+                    🌟 Most Popular
+                  </span>
+                )}
+                <h3 className="text-2xl font-bold mb-3 text-amber-800">
+                  {p.title}
+                </h3>
+                <p className="text-gray-500 line-through text-sm mb-1">
+                  {p.old}
+                </p>
+                <p className="text-4xl font-extrabold text-amber-700 mb-6">
+                  {p.price}
+                </p>
+                <ul className="text-gray-700 mb-8 space-y-2">
+                  {p.features.map((f, i2) => (
+                    <li
+                      key={i2}
+                      className="flex items-center justify-center gap-2"
+                    >
+                      <span>✅</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="#order" onClick={orderNow}>
+                  <button
+                    className={`${
+                      p.highlight
+                        ? "bg-amber-700 hover:bg-amber-800"
+                        : "bg-amber-600 hover:bg-amber-700"
+                    } text-white py-3 px-6 rounded-xl font-semibold shadow-md transition`}
+                  >
+                    ORDER NOW
+                  </button>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
