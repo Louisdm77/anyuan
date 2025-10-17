@@ -495,60 +495,44 @@ const Home = () => {
             your vital organs start to weaken all without you realizing it.
           </p>
 
-          <div class="bg-white rounded-2xl shadow-xl p-8 text-left space-y-6 border border-green-200">
-            <div class="flex items-start gap-3">
-              <span class="text-red-500 text-2xl">🔴</span>
+          <div className="bg-white rounded-2xl shadow-xl p-8 text-left space-y-6 border border-green-200">
+            <div className="flex items-start gap-3">
+              <span className="text-red-500 text-2xl">🔴</span>
               <p>
-                <strong>
-                  Stage 1: Irregular Bowel Movements & Hidden Waste Build-Up
-                </strong>
+                <strong>Stage 1: Missed Bowel Movements</strong>
                 <br />
-                You skip bowel movements, but think it’s harmless. Deep inside,
-                waste begins sticking to your intestinal walls like glue
-                starting the slow process of blockage and toxin buildup.
+                Skipping “nature’s call” traps waste inside. Sticky toxins begin
+                clinging to your intestines, starting hidden buildup.
               </p>
             </div>
 
-            <div class="flex items-start gap-3">
-              <span class="text-red-500 text-2xl">🟠</span>
+            <div className="flex items-start gap-3">
+              <span className="text-orange-500 text-2xl">🟠</span>
               <p>
-                <strong>
-                  Stage 2: Severe Bloating, Gas & Gut Inflammation
-                </strong>
+                <strong>Stage 2: Bloating & Gas Trouble</strong>
                 <br />
-                The trapped waste begins to rot and ferment, producing toxic
-                gases that bloat your belly and stretch your colon. The walls of
-                your intestine start getting weak and inflamed this is where{" "}
-                <span class="font-semibold">damage begins.</span>
+                Rotting waste releases gas, bloating your belly and irritating
+                your gut walls — early signs of inflammation.
               </p>
             </div>
 
-            <div class="flex items-start gap-3">
-              <span class="text-red-500 text-2xl">🟠</span>
+            <div className="flex items-start gap-3">
+              <span className="text-yellow-500 text-2xl">🟡</span>
               <p>
-                <strong>Stage 3: Intestinal Hardening & Nerve Damage</strong>
+                <strong>Stage 3: Gut Weakness Sets In</strong>
                 <br />
-                Chronic constipation causes your intestines to harden and lose
-                their natural movement (peristalsis). The nerves that push waste
-                out begin to fail, leading to constant heaviness, fatigue, and
-                even{" "}
-                <span class="font-semibold">toxic overload in your blood.</span>
+                Constant constipation stiffens your intestines. Nerves weaken —
+                waste gets harder to pass, leaving you tired and heavy.
               </p>
             </div>
 
-            <div class="flex items-start gap-3">
-              <span class="text-red-500 text-2xl">🔴</span>
+            <div className="flex items-start gap-3">
+              <span className="text-red-600 text-2xl">🔴</span>
               <p>
-                <strong>Stage 4: Complete Colon Collapse & Organ Stress</strong>
+                <strong>Stage 4: Toxic Overload</strong>
                 <br />
-                When your intestines are no longer able to move waste, toxins
-                spread into your bloodstream leading to{" "}
-                <span class="font-semibold text-red-600">
-                  skin problems, headaches, piles (hemorrhoids), liver strain,
-                  and even heart complications.
-                </span>
-                Doctors call this “auto-intoxication” your body literally starts
-                poisoning itself.
+                When waste stops moving, toxins leak into your bloodstream —
+                leading to skin issues, headaches, piles, and fatigue.
               </p>
             </div>
           </div>
@@ -712,7 +696,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="  max-w-6xl mx-auto">
+      <section className="  max-w-6xl mx-auto bg-green-400 p-2 mb-4">
         <h2 className="text-3xl font-bold text-center mb-10">
           What Nigerians Are Saying About This Natural Herbal Tea
         </h2>
@@ -1222,6 +1206,60 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="bg-green-50 py-12 mt-12">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <h2 className="text-3xl font-bold text-green-900 mb-2">
+            STILL HAVE QUESTIONS?
+          </h2>
+          <p className="text-green-800 mb-6">
+            We’re Here To Help You –{" "}
+            <span className="font-semibold">Contact Us</span>
+          </p>
+
+          <div className="bg-white rounded-xl shadow-lg p-6 inline-block mb-8">
+            <p className="text-2xl font-bold text-green-900">
+              📞 090-6570-6641
+            </p>
+          </div>
+
+          <h3 className="text-2xl font-semibold text-green-900 mb-4">
+            Frequently Asked Questions (FAQs)
+          </h3>
+
+          <div className="text-left space-y-4 max-w-lg mx-auto">
+            <div className="bg-white rounded-lg shadow p-4">
+              <h4 className="font-semibold text-green-900">
+                Does this product really work?
+              </h4>
+              <p className="text-green-800 text-sm mt-1">
+                Yes! Thousands have experienced relief from bloating and
+                constipation using our natural tea formula.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow p-4">
+              <h4 className="font-semibold text-green-900">
+                What are the side effects?
+              </h4>
+              <p className="text-green-800 text-sm mt-1">
+                None known. It’s made from 100% natural herbs and is gentle on
+                your stomach.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow p-4">
+              <h4 className="font-semibold text-green-900">
+                When will I start seeing results?
+              </h4>
+              <p className="text-green-800 text-sm mt-1">
+                Most users notice easier bowel movement and less bloating within
+                3–5 days of consistent use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 text-sm py-10 text-center ">
         <p>
@@ -1246,7 +1284,7 @@ const Home = () => {
       <a
         href="#order"
         onClick={orderNow}
-        className={`bg-white fixed top-0 right-0 z-50 text-gray-800 font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition text-center ${setInterval(
+        className={`bg-red-500 fixed top-0 right-0 z-50 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition text-center ${setInterval(
           () => {
             const colors = ["amber", "red", "green", "blue", "purple", "pink"];
             const randomColor =
