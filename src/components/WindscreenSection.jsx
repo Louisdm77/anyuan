@@ -50,11 +50,13 @@ export default function WindscreenSection() {
         <video
           className="rounded-2xl w-full max-h-[380px] object-cover shadow-lg mb-6"
           src={windvid}
-          preload="metadata"
-          controls
+          autoPlay
           muted
           loop
           playsInline
+          preload="auto"
+          controls
+
         >
           Your browser does not support the video tag.
         </video>

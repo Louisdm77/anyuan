@@ -42,7 +42,11 @@ export default function BenefitsSection() {
         <video
           className="rounded-2xl w-full max-h-[380px] mt-6 object-cover shadow-lg mb-6"
           src={sidevid1}
-          preload="metadata"
+         autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
           controls
           muted
           loop

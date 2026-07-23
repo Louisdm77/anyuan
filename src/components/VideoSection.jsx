@@ -14,7 +14,11 @@ export default function VideoSection() {
             <video
               className="w-full h-full object-cover"
               controls
-              preload="metadata"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
               // poster={VIDEO.poster}
               src={sidevid3}
             />
