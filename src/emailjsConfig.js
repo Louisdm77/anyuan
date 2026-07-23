@@ -3,9 +3,9 @@
 // Get them from: Account > API Keys / Email Services / Email Templates
 // ─────────────────────────────────────────────────────────────
 export const EMAILJS_CONFIG = {
-  SERVICE_ID: "YOUR_SERVICE_ID", // e.g. "service_abc1234"
-  TEMPLATE_ID: "YOUR_TEMPLATE_ID", // e.g. "template_xyz789"
-  PUBLIC_KEY: "YOUR_PUBLIC_KEY", // e.g. "AbCdEfGhIjKlMnOp"
+  SERVICE_ID: "service_mqb2izk", // e.g. "service_abc1234"
+  TEMPLATE_ID: "template_yaf3o3o", // e.g. "template_xyz789"
+  PUBLIC_KEY: "R6lYSIjXyCK5mRIPQ", // e.g. "AbCdEfGhIjKlMnOp"
 };
 
 // Your EmailJS template should expect these variable names

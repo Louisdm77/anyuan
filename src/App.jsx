@@ -36,7 +36,7 @@ export default function App() {
         <WhoItsFor />
         <FeaturesAndColors />
         <VideoSection />
-        <SocialProof />
+        {/* <SocialProof /> */}
         <VisionSection />
         <FaqSection />
         <GuaranteeSection />

@@ -1,4 +1,10 @@
 import { IMAGES } from "../content";
+import wind1 from "../assets/wind1.jpg"
+import wind2 from "../assets/wind2.jpg"
+import wind3 from "../assets/wind3.jpg"
+import wind4 from "../assets/wind4.jpg"
+import wind5 from "../assets/wind5.jpg"
+import windvid from "../assets/windvid.mp4"
 
 export default function WindscreenSection() {
   return (
@@ -21,7 +27,7 @@ export default function WindscreenSection() {
         <div className="grid grid-cols-2 gap-4 mb-6">
           <div>
             <img
-              src={IMAGES.windscreenBefore}
+              src={wind1}
               alt="Foggy windscreen from inside the car"
               className="rounded-xl w-full aspect-square object-cover shadow-md"
             />
@@ -31,7 +37,7 @@ export default function WindscreenSection() {
           </div>
           <div>
             <img
-              src={IMAGES.windscreenAfter}
+              src={wind5}
               alt="Clear windscreen after wiping with ClearView Pro"
               className="rounded-xl w-full aspect-square object-cover shadow-md ring-2 ring-brand-gold"
             />
@@ -41,11 +47,16 @@ export default function WindscreenSection() {
           </div>
         </div>
 
-        <img
-          src={IMAGES.windscreenUse}
-          alt="Wiping the inside of a windscreen with ClearView Pro"
+        <video
           className="rounded-2xl w-full max-h-[380px] object-cover shadow-lg mb-6"
-        />
+          src={windvid}
+          controls
+          muted
+          loop
+          playsInline
+        >
+          Your browser does not support the video tag.
+        </video>
 
         <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-2">
           <strong className="text-brand-navy">

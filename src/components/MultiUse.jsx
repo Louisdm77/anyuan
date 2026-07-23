@@ -1,4 +1,5 @@
 import { IMAGES } from "../content";
+import sidevid2 from "../assets/sidevid2.mp4";
 
 export default function MultiUse() {
   return (
@@ -20,6 +21,18 @@ export default function MultiUse() {
           alt="Hand using ClearView Pro to wipe a rainy side mirror"
           className="rounded-2xl w-full max-h-[420px] object-cover shadow-lg mb-4"
         />
+
+        <video
+                  className="rounded-2xl mt-6 w-full max-h-[380px] object-cover shadow-lg mb-6"
+                  src={sidevid2}
+                  controls
+                  muted
+                  loop
+                  playsInline
+                >
+                  Your browser does not support the video tag.
+                </video>
+        
 
         <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-8">
           <strong>Rain starts. Reach out. Wipe once. See clearly.</strong>{" "}

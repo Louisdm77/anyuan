@@ -1,3 +1,5 @@
+import sidevid1 from "../assets/sidevid1.mp4";
+
 const BENEFITS = [
   { lead: "See clearly", text: "in rain, mist, or dust, every single time you drive." },
   { lead: "No more wiping with a cloth", text: "clears your foggy windscreen without a wet sleeve or rag." },
@@ -33,8 +35,21 @@ export default function BenefitsSection() {
                 <strong className="text-brand-navy">{b.lead}</strong> {b.text}
               </p>
             </div>
+
+
           ))}
         </div>
+        <video
+          className="rounded-2xl w-full max-h-[380px] mt-6 object-cover shadow-lg mb-6"
+          src={sidevid1}
+          controls
+          muted
+          loop
+          playsInline
+        >
+          Your browser does not support the video tag.
+        </video>
+
       </div>
     </section>
   );
