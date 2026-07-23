@@ -23,16 +23,20 @@ export default function MultiUse() {
         />
 
         <video
-                  className="rounded-2xl mt-6 w-full max-h-[380px] object-cover shadow-lg mb-6"
-                  src={sidevid2}
-                  controls
-                  muted
-                  loop
-                  playsInline
-                >
-                  Your browser does not support the video tag.
-                </video>
-        
+          className="rounded-2xl mt-6 w-full max-h-[380px] object-cover shadow-lg mb-6"
+          src={sidevid2}
+          autoPlay
+          muted
+          loop
+          preload="auto"
+          controls
+          muted
+          loop
+          playsInline
+        >
+          Your browser does not support the video tag.
+        </video>
+
 
         <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-8">
           <strong>Rain starts. Reach out. Wipe once. See clearly.</strong>{" "}
